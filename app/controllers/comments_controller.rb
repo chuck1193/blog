@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  http_basib_autheenticate_with name: 'vicmoneylemonpi', password: 'secret', only: destroy
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
